@@ -1,21 +1,53 @@
-# 字母 E 开头的兼容包（15 个）
+# 字母 E 开头的兼容包（47 个）
 
 > [← 返回首页](../README.md)
 
 | 包名 | 版本 |
 |------|------|
+| `eastasianwidth` | 0.3.0 |
 | `echarts` | 6.1.0 |
 | `electron-better-ipc` | 3.0.0 |
+| `electron-conf` | 1.3.0 |
 | `electron-debug` | 5.0.0 |
+| `electron-fetch` | 1.9.1 |
+| `electron-is-accelerator` | 0.2.0 |
+| `electron-json-storage` | 4.6.0 |
 | `electron-localshortcut` | 3.2.1 |
 | `electron-log` | 5.4.4 |
+| `electron-prompt` | 1.7.0 |
+| `electron-settings` | 4.0.4 |
+| `electron-squirrel-startup` | 1.0.1 |
 | `electron-store` | 12.0.0 |
 | `@electron-toolkit/preload` | 3.0.2 |
 | `@electron/remote` | 2.1.3 |
 | `element-plus` | 2.14.7 |
+| `@element-plus/icons-vue` | 2.3.2 |
 | `element-ui` | 2.15.14 |
+| `elliptic` | 6.6.1 |
+| `emoji-regex` | 11.0.0 |
+| `enabled` | 2.0.0 |
 | `encoding` | 0.1.13 |
+| `end-of-stream` | 1.4.5 |
 | `engine.io` | 6.6.11 |
+| `es-define-property` | 1.0.1 |
+| `es-errors` | 1.3.0 |
+| `es-object-atoms` | 1.1.2 |
+| `es-set-tostringtag` | 2.1.0 |
+| `es-to-primitive` | 1.3.4 |
+| `es5-ext` | 0.10.64 |
+| `es6-promise` | 4.2.8 |
+| `es6-promisify` | 7.0.0 |
+| `es6-set` | 0.1.6 |
+| `escape-string-regexp` | 5.0.0 |
+| `escodegen` | 2.1.0 |
+| `esprima` | 4.0.1 |
+| `eventemitter3` | 5.0.4 |
+| `eventproxy` | 1.0.0 |
 | `events` | 3.3.0 |
+| `evernote` | 2.0.5 |
+| `exif-js` | 2.3.0 |
 | `express` | 5.3.0 |
+| `ext-list` | 4.0.0 |
 | `ext-name` | 5.0.0 |
+| `extend` | 3.0.2 |
+| `extsprintf` | 1.4.1 |

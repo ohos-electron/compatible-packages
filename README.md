@@ -4,7 +4,7 @@
 
 ## 📊 统计摘要
 
-> 更新日期：2026-10-29 | 兼容包总数：**227**
+> 更新日期：2026-10-29 | 兼容包总数：**749**
 
 ## 🔍 在线查询
 
@@ -14,32 +14,32 @@
 
 | 字母 | 包数量 | 浏览表格 |
 |------|--------|---------|
-| A | 12 | [A](data/a.md) |
-| B | 12 | [B](data/b.md) |
-| C | 13 | [C](data/c.md) |
-| D | 13 | [D](data/d.md) |
-| E | 15 | [E](data/e.md) |
-| F | 8 | [F](data/f.md) |
-| G | 7 | [G](data/g.md) |
-| H | 6 | [H](data/h.md) |
-| I | 9 | [I](data/i.md) |
-| J | 9 | [J](data/j.md) |
-| K | 1 | [K](data/k.md) |
-| L | 11 | [L](data/l.md) |
-| M | 16 | [M](data/m.md) |
-| N | 7 | [N](data/n.md) |
-| O | 2 | [O](data/o.md) |
-| P | 12 | [P](data/p.md) |
-| Q | 4 | [Q](data/q.md) |
-| R | 10 | [R](data/r.md) |
-| S | 16 | [S](data/s.md) |
-| T | 10 | [T](data/t.md) |
-| U | 7 | [U](data/u.md) |
-| V | 9 | [V](data/v.md) |
-| W | 4 | [W](data/w.md) |
-| X | 10 | [X](data/x.md) |
-| Y | 2 | [Y](data/y.md) |
-| Z | 2 | [Z](data/z.md) |
+| A | 34 | [A](data/a.md) |
+| B | 26 | [B](data/b.md) |
+| C | 53 | [C](data/c.md) |
+| D | 37 | [D](data/d.md) |
+| E | 47 | [E](data/e.md) |
+| F | 21 | [F](data/f.md) |
+| G | 13 | [G](data/g.md) |
+| H | 25 | [H](data/h.md) |
+| I | 35 | [I](data/i.md) |
+| J | 23 | [J](data/j.md) |
+| K | 5 | [K](data/k.md) |
+| L | 29 | [L](data/l.md) |
+| M | 56 | [M](data/m.md) |
+| N | 21 | [N](data/n.md) |
+| O | 10 | [O](data/o.md) |
+| P | 46 | [P](data/p.md) |
+| Q | 11 | [Q](data/q.md) |
+| R | 55 | [R](data/r.md) |
+| S | 68 | [S](data/s.md) |
+| T | 42 | [T](data/t.md) |
+| U | 21 | [U](data/u.md) |
+| V | 34 | [V](data/v.md) |
+| W | 10 | [W](data/w.md) |
+| X | 16 | [X](data/x.md) |
+| Y | 7 | [Y](data/y.md) |
+| Z | 4 | [Z](data/z.md) |
 
 > 💡 在表格页面中可使用浏览器 `Ctrl+F` 搜索包名。
 
