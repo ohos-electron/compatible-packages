@@ -17,11 +17,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .stat-card{background:#fff;border-radius:8px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.08);text-align:center;min-width:100px}
 .stat-card .num{font-size:22px;font-weight:700;color:#4f46e5}
 .stat-card .label{font-size:11px;color:#999;margin-top:4px}
-.letter-nav{display:flex;justify-content:center;gap:4px;margin-bottom:20px;flex-wrap:wrap;max-width:600px;margin-left:auto;margin-right:auto}
-.letter-nav a{display:inline-block;padding:4px 10px;border-radius:4px;font-size:13px;text-decoration:none;color:#555;background:#fff;border:1px solid #e0e0e0;cursor:pointer;transition:all .15s}
-.letter-nav a span{font-size:10px;color:#999}
-.letter-nav a:hover,.letter-nav a.active{background:#4f46e5;color:#fff;border-color:#4f46e5}
-.letter-nav a:hover span,.letter-nav a.active span{color:#e0e7ff}
 .search-box{position:relative;margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto}
 .search-box input{width:100%;padding:14px 16px 14px 44px;font-size:16px;border:2px solid #e0e0e0;border-radius:8px;outline:none;background:#fff}
 .search-box input:focus{border-color:#4f46e5}
@@ -60,7 +55,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
     <div class="disclaimer">⚠️ 兼容性验证由 AI 自动完成，可能存在部分与实际不符的情况。如发现错误，欢迎 <a id="issueLink" href="#" target="_blank">提交 Issue</a> 反馈。</div>
   </div>
   <div class="stats-bar" id="statsBar"><div class="stat-card"><div class="num">-</div><div class="label">加载中</div></div></div>
-  <div class="letter-nav" id="letterNav"></div>
   <div class="search-box">
     <span class="icon">🔍</span>
     <input type="text" id="searchInput" placeholder="输入 npm 包名，如 lodash、@electron/remote、ws..." autocomplete="off">
@@ -83,7 +77,6 @@ var DATA_DIR = 'data';
 var CACHE_BUST = '?v=' + Date.now();
 var indexData = null;
 var fileCache = {};
-var currentLetter = null;
 var searchTimer = null;
 var currentPage = 1;
 var pageSize = 100;
@@ -177,34 +170,22 @@ async function loadAll() {
   return [].concat.apply([], parts);
 }
 
-function setActiveLetter(letter) {
-  var links = document.querySelectorAll('.letter-nav a');
-  for (var i = 0; i < links.length; i++) {
-    links[i].classList.toggle('active', links[i].getAttribute('data-letter') === letter);
-  }
-}
-
-async function loadLetter(letter) {
-  currentLetter = letter;
-  document.getElementById('searchInput').value = '';
-  setActiveLetter(letter);
-
+async function showAll() {
   document.getElementById('loading').classList.add('show');
-  var data = await loadFile(letter + '.jsonl');
+  var data = await loadAll();
   document.getElementById('loading').classList.remove('show');
-  displayData(data, '字母 ' + letter.toUpperCase() + ' 的包列表');
+  displayData(data, '全部兼容包');
 }
 
 async function doSearch(query) {
   query = query.trim();
 
   if (query.length === 0) {
-    if (currentLetter) await loadLetter(currentLetter);
+    await showAll();
     return;
   }
 
   document.getElementById('loading').classList.add('show');
-  setActiveLetter(null);
   var data = await loadAll();
   document.getElementById('loading').classList.remove('show');
 
@@ -235,20 +216,6 @@ function renderStats() {
     '<div class="stat-card"><div class="num">' + esc(indexData.last_updated) + '</div><div class="label">最后更新</div></div>';
 }
 
-function renderLetterNav() {
-  var letters = 'abcdefghijklmnopqrstuvwxyz'.split('').concat(['0-9']);
-  var html = '';
-  for (var i = 0; i < letters.length; i++) {
-    var ch = letters[i];
-    var count = indexData.files[ch + '.jsonl'] || 0;
-    if (count > 0) {
-      html += '<a data-letter="' + ch + '" onclick="loadLetter(\'' + ch + '\')">' +
-              ch.toUpperCase() + ' <span>(' + count + ')</span></a>';
-    }
-  }
-  document.getElementById('letterNav').innerHTML = html;
-}
-
 function renderLinks() {
   var repoUrl = 'https://github.com/' + indexData.repo;
   var repoLink = document.getElementById('repoLink');
@@ -265,10 +232,8 @@ async function loadIndex() {
     var resp = await fetch(DATA_DIR + '/index.json' + CACHE_BUST);
     indexData = await resp.json();
     renderStats();
-    renderLetterNav();
     renderLinks();
-    var first = Object.keys(indexData.files)[0];
-    if (first) await loadLetter(first.replace('.jsonl', ''));
+    await showAll();
   } catch(e) {
     console.error('Failed to load index:', e);
     document.getElementById('resultInfo').textContent = '加载数据失败';
