@@ -1,0 +1,4 @@
+{"name": "@wecom/aibot-node-sdk", "version": "1.0.7"}
+{"name": "winston", "version": "3.19.0"}
+{"name": "winston-transport", "version": "4.9.0"}
+{"name": "ws", "version": "8.22.0"}
