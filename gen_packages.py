@@ -216,7 +216,7 @@ git push
 def main():
     parser = argparse.ArgumentParser(description="从 xlsx 生成 Electron 兼容包数据")
     parser.add_argument("xlsx", help="分析结果 xlsx 文件路径")
-    parser.add_argument("--repo", default="OWNER/electron-compatible-packages", help="GitHub 仓库 owner/name")
+    parser.add_argument("--repo", default="ohos-electron/compatible-packages", help="GitHub 仓库 owner/name")
     parser.add_argument("--electron", default="34", help="验证所用的 Electron 主版本")
     args = parser.parse_args()
 

@@ -2,7 +2,7 @@
   "total": 227,
   "last_updated": "2026-10-29",
   "electron_version": "34",
-  "repo": "ShiZiShiZi/electron-compatible-packages",
+  "repo": "ohos-electron/compatible-packages",
   "files": {
     "a.jsonl": 12,
     "b.jsonl": 12,

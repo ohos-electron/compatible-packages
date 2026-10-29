@@ -1,4 +1,4 @@
-# electron-compatible-packages
+# compatible-packages
 
 已在鸿蒙 PC 的 Electron 34 上验证通过的 npm 包列表。这些包可直接在该 Electron 环境中使用，无需额外适配。
 
@@ -8,7 +8,7 @@
 
 ## 🔍 在线查询
 
-👉 **[点击打开搜索页](https://shizishizi.github.io/electron-compatible-packages/)**（支持按包名搜索 + 按字母浏览）
+👉 **[点击打开搜索页](https://ohos-electron.github.io/compatible-packages/)**（支持按包名搜索 + 按字母浏览）
 
 **按字母浏览**（GitHub Markdown 表格）：
 
@@ -45,7 +45,7 @@
 
 ## ⚠️ 免责声明
 
-兼容性验证结果由 AI 自动验证生成，可能存在部分与实际不符的情况。如发现错误，欢迎 [提交 Issue](https://github.com/ShiZiShiZi/electron-compatible-packages/issues) 反馈。
+兼容性验证结果由 AI 自动验证生成，可能存在部分与实际不符的情况。如发现错误，欢迎 [提交 Issue](https://github.com/ohos-electron/compatible-packages/issues) 反馈。
 
 ## 📁 项目结构
 
@@ -63,8 +63,8 @@
 ### 命令行查询
 
 ```bash
-git clone https://github.com/ShiZiShiZi/electron-compatible-packages.git
-cd electron-compatible-packages
+git clone https://github.com/ohos-electron/compatible-packages.git
+cd compatible-packages
 
 # 模糊搜索
 grep "lodash" data/l.jsonl
@@ -87,7 +87,7 @@ const packages = fs.readFileSync('data/l.jsonl', 'utf8')
 ```bash
 # 1. 准备新的分析结果 xlsx（sheet「包结论汇总」，含「状态」「包名」「版本」列）
 # 2. 运行生成脚本（只收录状态为「通过」的包）
-python3 gen_packages.py <xlsx文件路径> --repo ShiZiShiZi/electron-compatible-packages --electron 34
+python3 gen_packages.py <xlsx文件路径> --repo ohos-electron/compatible-packages --electron 34
 # 3. 提交
 git add -A && git commit -m "update: 更新兼容包列表"
 git push
