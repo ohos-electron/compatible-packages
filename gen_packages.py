@@ -84,7 +84,7 @@ def read_packages(xlsx_path):
     return sorted(packages.values(), key=lambda p: get_sort_key(p["name"]))
 
 
-def write_data(packages, electron_version, repo):
+def write_data(packages, electron_versions, repo):
     groups = defaultdict(list)
     for p in packages:
         groups[get_first_letter(p["name"])].append(p)
@@ -116,7 +116,7 @@ def write_data(packages, electron_version, repo):
     index_data = {
         "total": len(packages),
         "last_updated": str(date.today()),
-        "electron_version": electron_version,
+        "electron_versions": electron_versions,
         "repo": repo,
         "files": file_counts,
     }
@@ -131,7 +131,8 @@ def write_readme(index_data):
     owner, name = repo.split("/", 1)
     site_url = f"https://{owner.lower()}.github.io/{name}/"
     repo_url = f"https://github.com/{repo}"
-    ev = index_data["electron_version"]
+    ev = " / ".join(index_data["electron_versions"])
+    ev_arg = ",".join(index_data["electron_versions"])
 
     letter_rows = "\n".join(
         f"| {letter.upper()} | {index_data['files'][f'{letter}.jsonl']:,} | [{letter.upper()}](data/{letter}.md) |"
@@ -203,7 +204,7 @@ const packages = fs.readFileSync('data/l.jsonl', 'utf8')
 ```bash
 # 1. 准备新的分析结果 xlsx（sheet「{SHEET_NAME}」，含「{COL_STATUS}」「{COL_NAME}」「{COL_VERSION}」列）
 # 2. 运行生成脚本（只收录状态为「{PASS_STATUS}」的包）
-python3 gen_packages.py <xlsx文件路径> --repo {repo} --electron {ev}
+python3 gen_packages.py <xlsx文件路径> --repo {repo} --electron {ev_arg}
 # 3. 提交
 git add -A && git commit -m "update: 更新兼容包列表"
 git push
@@ -217,7 +218,7 @@ def main():
     parser = argparse.ArgumentParser(description="从 xlsx 生成 Electron 兼容包数据")
     parser.add_argument("xlsx", help="分析结果 xlsx 文件路径")
     parser.add_argument("--repo", default="ohos-electron/compatible-packages", help="GitHub 仓库 owner/name")
-    parser.add_argument("--electron", default="34", help="验证所用的 Electron 主版本")
+    parser.add_argument("--electron", default="34", help="支持的 Electron 主版本，逗号分隔")
     args = parser.parse_args()
 
     if not os.path.isfile(args.xlsx):
@@ -227,7 +228,8 @@ def main():
 
     print(f"Reading {args.xlsx}...")
     packages = read_packages(args.xlsx)
-    index_data = write_data(packages, args.electron, args.repo)
+    electron_versions = [v.strip() for v in args.electron.split(",") if v.strip()]
+    index_data = write_data(packages, electron_versions, args.repo)
     write_readme(index_data)
     print(f"Done: {index_data['total']} packages, {len(index_data['files'])} files")
 
