@@ -4,7 +4,7 @@
 
 ## 📊 统计摘要
 
-> 更新日期：2026-10-29 | 兼容包总数：**749**
+> 更新日期：2026-11-07 | 兼容包总数：**749**
 
 ## 🔍 在线查询
 
@@ -82,12 +82,14 @@ const packages = fs.readFileSync('data/l.jsonl', 'utf8')
   .trim().split('\n').map(JSON.parse);
 ```
 
+每条记录有 `name`、`version`；已确认可在对应进程使用时，还有 `"main": true`（主进程）/ `"renderer": true`（渲染进程）。没有这两个字段表示进程未标注，不代表不兼容。
+
 ## 🔧 数据更新
 
 ```bash
-# 1. 准备新的分析结果 xlsx（sheet「包结论汇总」，含「状态」「包名」「版本」列）
-# 2. 运行生成脚本（只收录状态为「通过」的包）
-python3 gen_packages.py <xlsx文件路径> --repo ohos-electron/compatible-packages --electron 34
+# 1. 准备新的分析结果 xlsx（sheet「包结论汇总」，含「状态」「包名」「版本」「生成时间」列，可选「主进程」「渲染进程」列）
+# 2. 把历次分析结果 xlsx 全部传入（新结果追加在最后）：每个包取「生成时间」最新的一行，状态为「通过」才收录
+python3 gen_packages.py <xlsx> [<xlsx> ...] --repo ohos-electron/compatible-packages --electron 34
 # 3. 提交
 git add -A && git commit -m "update: 更新兼容包列表"
 git push

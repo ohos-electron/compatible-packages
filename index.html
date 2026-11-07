@@ -32,13 +32,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .pkg-name a{color:inherit;text-decoration:none}
 .pkg-name a:hover{color:#4f46e5;text-decoration:underline}
 .pkg-version{font-family:monospace;color:#059669}
-.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:500;background:#d1fae5;color:#065f46;white-space:nowrap}
-.ev-tag{display:inline-block;padding:1px 7px;margin:1px 4px 1px 0;border-radius:4px;font-size:12px;font-family:monospace;background:#e0e7ff;color:#3730a3}
-.proc{white-space:nowrap;font-size:13px;margin-right:10px}
-.proc:last-child{margin-right:0}
-.proc-ok{color:#059669}
-.proc-no{color:#aaa}
-.proc-none{color:#bbb}
+.tag{display:inline-block;padding:2px 8px;margin:2px 4px 2px 0;border-radius:4px;font-size:12px;font-weight:500;line-height:18px;white-space:nowrap}
+.tag:last-child{margin-right:0}
+.tag-blue{background:#e0e7ff;color:#3730a3}
+.tag-green{background:#d1fae5;color:#065f46}
+.empty{color:#bbb}
 .install{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:monospace;font-size:12px;background:#f3f4f6;color:#374151;padding:3px 8px;border:1px solid transparent;border-radius:4px;cursor:pointer}
 .install:hover{background:#e5e7eb;border-color:#4f46e5}
 .install.done{background:#d1fae5;color:#065f46;border-color:#059669}
@@ -107,7 +105,7 @@ function esc(s) {
 }
 
 function procCell(ok, label) {
-  return '<span class="proc ' + (ok ? 'proc-ok">✓' : 'proc-no">✗') + label + '</span>';
+  return ok === true ? '<span class="tag tag-green">✅ ' + label + '</span>' : '';
 }
 
 function installCmd(p) {
@@ -130,7 +128,7 @@ function fallbackCopy(text) {
 function copyInstall(el) {
   var cmd = el.getAttribute('data-cmd');
   var done = function(ok) {
-    el.textContent = ok ? '✓ 已复制' : '复制失败';
+    el.textContent = ok ? '✅ 已复制' : '复制失败';
     el.classList.toggle('done', ok);
     el.classList.toggle('fail', !ok);
     clearTimeout(el._timer);
@@ -175,21 +173,20 @@ function renderPage() {
   var disp = data.slice(start, end);
 
   // Electron 版本：包级 electron 字段优先，缺省用 index.json 的 electron_versions
-  // 进程兼容：只认包级 main / renderer 字段，没有数据显示「—」
+  // 进程兼容：只显示包级 main / renderer 为 true 的进程，都没有时显示「—」
   var defVersions = indexData.electron_versions || [];
   var html = '';
   for (var i = 0; i < disp.length; i++) {
     var p = disp[i];
     var npmUrl = 'https://www.npmjs.com/package/' + p.name;
     var versions = p.electron || defVersions;
-    var proc = (p.main !== undefined ? procCell(p.main, '主进程') : '') +
-      (p.renderer !== undefined ? procCell(p.renderer, '渲染进程') : '');
+    var proc = procCell(p.main, '主进程') + procCell(p.renderer, '渲染进程');
     var cmd = installCmd(p);
     html += '<tr><td class="pkg-name"><a href="' + esc(npmUrl) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a></td>';
     html += '<td class="pkg-version">' + esc(p.version || '—') + '</td>';
-    html += '<td>' + versions.map(function(v) { return '<span class="ev-tag">' + esc(v) + '</span>'; }).join('') + '</td>';
-    html += '<td>' + (proc || '<span class="proc-none">—</span>') + '</td>';
-    html += '<td><span class="badge">✅ 兼容</span></td>';
+    html += '<td>' + versions.map(function(v) { return '<span class="tag tag-blue">' + esc(v) + '</span>'; }).join('') + '</td>';
+    html += '<td>' + (proc || '<span class="empty">—</span>') + '</td>';
+    html += '<td><span class="tag tag-green">✅ 兼容</span></td>';
     html += '<td><code class="install" data-cmd="' + esc(cmd) + '" title="点击复制：' + esc(cmd) + '" onclick="copyInstall(this)">' + esc(cmd) + '</code></td></tr>';
   }
   tbody.innerHTML = html;

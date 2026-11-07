@@ -1,10 +1,10 @@
-{"name": "@wecom/aibot-node-sdk", "version": "1.0.7"}
+{"name": "@wecom/aibot-node-sdk", "version": "1.0.7", "main": true}
 {"name": "when-exit", "version": "2.1.5"}
 {"name": "windows-release", "version": "7.1.1"}
-{"name": "winston-transport", "version": "4.9.0"}
+{"name": "winston-transport", "version": "4.9.0", "main": true}
 {"name": "wordcloud", "version": "1.2.3"}
 {"name": "wrap-ansi", "version": "10.0.2"}
 {"name": "wrapper", "version": "0.1.0"}
 {"name": "wrappy", "version": "1.0.2"}
-{"name": "write-file-atomic", "version": "8.0.0"}
-{"name": "ws", "version": "8.22.0"}
+{"name": "write-file-atomic", "version": "8.0.0", "main": true}
+{"name": "ws", "version": "8.22.0", "main": true}

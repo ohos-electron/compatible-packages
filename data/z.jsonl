@@ -1,4 +1,4 @@
-{"name": "@zip.js/zip.js", "version": "2.24.0"}
-{"name": "zod", "version": "4.6.7"}
+{"name": "@zip.js/zip.js", "version": "2.24.0", "main": true, "renderer": true}
+{"name": "zod", "version": "4.6.7", "main": true, "renderer": true}
 {"name": "zstd-codec", "version": "0.1.5"}
-{"name": "zustand", "version": "5.0.15"}
+{"name": "zustand", "version": "5.0.15", "main": true, "renderer": true}

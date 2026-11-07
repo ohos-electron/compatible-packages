@@ -2,58 +2,58 @@
 
 > [← 返回首页](../README.md)
 
-| 包名 | 版本 |
-|------|------|
-| `cacache` | 21.0.1 |
-| `cacheable-request` | 13.0.19 |
-| `call-bind` | 1.0.9 |
-| `call-bind-apply-helpers` | 1.0.2 |
-| `@canvas/image-data` | 1.1.0 |
-| `capture-stack-trace` | 2.1.0 |
-| `case` | 1.6.3 |
-| `caseless` | 0.12.0 |
-| `caw` | 2.0.1 |
-| `chalk` | 6.0.1 |
-| `chardet` | 2.2.0 |
-| `charenc` | 0.0.2 |
-| `check-disk-space` | 4.0.0 |
-| `chownr` | 3.0.0 |
-| `chrome-remote-interface` | 0.34.0 |
-| `cjs2esmodule` | 1.1.1 |
-| `@ckpack/vue-color` | 1.6.0 |
-| `classic-level` | 3.0.0 |
-| `classnames` | 2.5.1 |
-| `clone-response` | 2.0.0 |
-| `clsx` | 2.1.1 |
-| `clusterize.js` | 1.0.0 |
-| `color` | 5.0.3 |
-| `color-convert` | 3.1.3 |
-| `color-name` | 2.1.1 |
-| `color-string` | 2.1.4 |
-| `@colors/colors` | 1.6.1 |
-| `colorspace` | 1.1.4 |
-| `colorthief` | 3.5.0 |
-| `combined-stream` | 1.0.8 |
-| `comlink` | 4.4.2 |
-| `compress-commons` | 7.0.1 |
-| `compression` | 1.8.2 |
-| `compressorjs` | 1.4.0 |
-| `concat-map` | 0.0.2 |
-| `config-chain` | 1.1.13 |
-| `connect` | 3.7.0 |
-| `@connectrpc/connect` | 2.2.0 |
-| `@connectrpc/connect-web` | 2.2.0 |
-| `content-disposition` | 3.0.0 |
-| `cookie` | 2.0.1 |
-| `core-js` | 3.51.0 |
-| `core-util-is` | 1.0.3 |
-| `corser` | 2.0.1 |
-| `cos-nodejs-sdk-v5` | 3.0.0 |
-| `crc` | 4.3.2 |
-| `crc32-stream` | 7.0.1 |
-| `cron` | 4.4.0 |
-| `croner` | 11.0.0 |
-| `crypt` | 0.0.2 |
-| `crypto-es` | 3.1.3 |
-| `crypto-js` | 4.2.0 |
-| `@ctrl/tinycolor` | 4.2.1 |
+| 包名 | 版本 | 进程 |
+|------|------|------|
+| `cacache` | 21.0.1 | 主进程 |
+| `cacheable-request` | 13.0.19 | 主进程 |
+| `call-bind` | 1.0.9 | 主进程 |
+| `call-bind-apply-helpers` | 1.0.2 | 主进程 |
+| `@canvas/image-data` | 1.1.0 | 主进程 |
+| `capture-stack-trace` | 2.1.0 | 主进程、渲染进程 |
+| `case` | 1.6.3 | 主进程、渲染进程 |
+| `caseless` | 0.12.0 | 主进程 |
+| `caw` | 2.0.1 | 主进程 |
+| `chalk` | 6.0.1 | 主进程 |
+| `chardet` | 2.2.0 | 主进程 |
+| `charenc` | 0.0.2 | — |
+| `check-disk-space` | 4.0.0 | 主进程 |
+| `chownr` | 3.0.0 | 主进程 |
+| `chrome-remote-interface` | 0.34.0 | 主进程 |
+| `cjs2esmodule` | 1.1.1 | 主进程 |
+| `@ckpack/vue-color` | 1.6.0 | 渲染进程 |
+| `classic-level` | 3.0.0 | 主进程 |
+| `classnames` | 2.5.1 | 主进程、渲染进程 |
+| `clone-response` | 2.0.0 | 主进程 |
+| `clsx` | 2.1.1 | 主进程、渲染进程 |
+| `clusterize.js` | 1.0.0 | 渲染进程 |
+| `color` | 5.0.3 | 主进程 |
+| `color-convert` | 3.1.3 | 主进程 |
+| `color-name` | 2.1.1 | 主进程、渲染进程 |
+| `color-string` | 2.1.4 | 主进程 |
+| `@colors/colors` | 1.6.1 | 主进程 |
+| `colorspace` | 1.1.4 | 主进程 |
+| `colorthief` | 3.5.0 | 主进程、渲染进程 |
+| `combined-stream` | 1.0.8 | 主进程 |
+| `comlink` | 4.4.2 | 主进程、渲染进程 |
+| `compress-commons` | 7.0.1 | 主进程 |
+| `compression` | 1.8.2 | 主进程 |
+| `compressorjs` | 1.4.0 | 渲染进程 |
+| `concat-map` | 0.0.2 | 主进程 |
+| `config-chain` | 1.1.13 | 主进程 |
+| `connect` | 3.7.0 | 主进程 |
+| `@connectrpc/connect` | 2.2.0 | 主进程 |
+| `@connectrpc/connect-web` | 2.2.0 | 主进程、渲染进程 |
+| `content-disposition` | 3.0.0 | 主进程 |
+| `cookie` | 2.0.1 | 主进程、渲染进程 |
+| `core-js` | 3.51.0 | 主进程 |
+| `core-util-is` | 1.0.3 | 主进程 |
+| `corser` | 2.0.1 | 主进程、渲染进程 |
+| `cos-nodejs-sdk-v5` | 3.0.0 | 主进程 |
+| `crc` | 4.3.2 | 主进程 |
+| `crc32-stream` | 7.0.1 | 主进程 |
+| `cron` | 4.4.0 | 主进程 |
+| `croner` | 11.0.0 | 主进程、渲染进程 |
+| `crypt` | 0.0.2 | — |
+| `crypto-es` | 3.1.3 | 主进程、渲染进程 |
+| `crypto-js` | 4.2.0 | 主进程、渲染进程 |
+| `@ctrl/tinycolor` | 4.2.1 | 主进程、渲染进程 |

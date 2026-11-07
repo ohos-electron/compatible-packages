@@ -1,26 +1,26 @@
-{"name": "babel-helper-vue-jsx-merge-props", "version": "2.0.3"}
-{"name": "babel-runtime", "version": "6.26.0"}
-{"name": "@babel/runtime", "version": "8.0.7"}
-{"name": "baidubce-sdk", "version": "0.0.23"}
-{"name": "balanced-match", "version": "5.0.0"}
-{"name": "base64-img", "version": "1.0.4"}
-{"name": "base64-js", "version": "1.5.1"}
-{"name": "base64id", "version": "2.0.0"}
-{"name": "bcrypt-pbkdf", "version": "1.0.2"}
-{"name": "big-integer", "version": "1.6.52"}
-{"name": "big.js", "version": "7.0.1"}
-{"name": "bignumber.js", "version": "11.1.5"}
-{"name": "bindings", "version": "1.5.0"}
-{"name": "bl", "version": "7.0.13"}
-{"name": "bmp-js", "version": "0.1.0"}
-{"name": "body-parser", "version": "2.3.0"}
-{"name": "brace-expansion", "version": "5.0.12"}
-{"name": "buffer", "version": "6.0.3"}
-{"name": "buffer-alloc", "version": "1.2.0"}
-{"name": "buffer-alloc-unsafe", "version": "1.1.0"}
-{"name": "buffer-crc32", "version": "1.0.0"}
-{"name": "buffer-fill", "version": "1.0.0"}
-{"name": "buffer-from", "version": "1.1.2"}
-{"name": "bufferhelper", "version": "0.2.1"}
-{"name": "bufferutil", "version": "4.1.0"}
-{"name": "builder-util-runtime", "version": "9.7.0"}
+{"name": "babel-helper-vue-jsx-merge-props", "version": "2.0.3", "main": true}
+{"name": "babel-runtime", "version": "6.26.0", "main": true}
+{"name": "@babel/runtime", "version": "8.0.7", "main": true, "renderer": true}
+{"name": "baidubce-sdk", "version": "0.0.23", "main": true}
+{"name": "balanced-match", "version": "5.0.0", "main": true, "renderer": true}
+{"name": "base64-img", "version": "1.0.4", "main": true}
+{"name": "base64-js", "version": "1.5.1", "main": true, "renderer": true}
+{"name": "base64id", "version": "2.0.0", "main": true}
+{"name": "bcrypt-pbkdf", "version": "1.0.2", "main": true}
+{"name": "big-integer", "version": "1.6.52", "main": true, "renderer": true}
+{"name": "big.js", "version": "7.0.1", "main": true, "renderer": true}
+{"name": "bignumber.js", "version": "11.1.5", "main": true, "renderer": true}
+{"name": "bindings", "version": "1.5.0", "main": true}
+{"name": "bl", "version": "7.0.13", "main": true}
+{"name": "bmp-js", "version": "0.1.0", "main": true}
+{"name": "body-parser", "version": "2.3.0", "main": true}
+{"name": "brace-expansion", "version": "5.0.12", "main": true}
+{"name": "buffer", "version": "6.0.3", "main": true}
+{"name": "buffer-alloc", "version": "1.2.0", "main": true}
+{"name": "buffer-alloc-unsafe", "version": "1.1.0", "main": true}
+{"name": "buffer-crc32", "version": "1.0.0", "main": true}
+{"name": "buffer-fill", "version": "1.0.0", "main": true}
+{"name": "buffer-from", "version": "1.1.2", "main": true}
+{"name": "bufferhelper", "version": "0.2.1", "main": true}
+{"name": "bufferutil", "version": "4.1.0", "main": true}
+{"name": "builder-util-runtime", "version": "9.7.0", "main": true}

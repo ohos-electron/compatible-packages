@@ -1,34 +1,34 @@
 {"name": "v-click-outside", "version": "3.2.0"}
-{"name": "v8-inspect-profiler", "version": "0.1.1"}
+{"name": "v8-inspect-profiler", "version": "0.1.1", "main": true}
 {"name": "vconsole", "version": "3.15.1"}
 {"name": "vditor", "version": "4.0.1"}
 {"name": "verror", "version": "1.10.1"}
 {"name": "viewerjs", "version": "1.15.2"}
-{"name": "@vitalets/google-translate-api", "version": "9.2.1"}
+{"name": "@vitalets/google-translate-api", "version": "9.2.1", "main": true}
 {"name": "vscode-languageserver-types", "version": "3.18.5"}
-{"name": "vscode-regexpp", "version": "3.1.0"}
-{"name": "vscode-uri", "version": "3.2.0"}
-{"name": "@vscode/iconv-lite-umd", "version": "0.7.1"}
-{"name": "@vscode/spdlog", "version": "0.15.8"}
-{"name": "@vscode/sqlite3", "version": "5.1.12-vscode"}
-{"name": "@vscode/vscode-languagedetection", "version": "1.0.23"}
+{"name": "vscode-regexpp", "version": "3.1.0", "main": true, "renderer": true}
+{"name": "vscode-uri", "version": "3.2.0", "main": true, "renderer": true}
+{"name": "@vscode/iconv-lite-umd", "version": "0.7.1", "main": true, "renderer": true}
+{"name": "@vscode/spdlog", "version": "0.15.8", "main": true}
+{"name": "@vscode/sqlite3", "version": "5.1.12-vscode", "main": true}
+{"name": "@vscode/vscode-languagedetection", "version": "1.0.23", "main": true}
 {"name": "vue-advanced-cropper", "version": "2.8.9"}
 {"name": "vue-concise-slider", "version": "4.2.5"}
-{"name": "vue-demi", "version": "0.14.10"}
+{"name": "vue-demi", "version": "0.14.10", "main": true, "renderer": true}
 {"name": "vue-dk-toast", "version": "3.2.1"}
 {"name": "vue-draggable-next", "version": "2.3.0"}
 {"name": "vue-echarts", "version": "8.3.2"}
-{"name": "vue-i18n", "version": "11.4.16"}
+{"name": "vue-i18n", "version": "11.4.16", "main": true, "renderer": true}
 {"name": "vue-observe-visibility", "version": "1.0.0"}
-{"name": "@vue-office/docx", "version": "1.6.3"}
-{"name": "@vue-office/excel", "version": "1.7.14"}
+{"name": "@vue-office/docx", "version": "1.6.3", "main": true, "renderer": true}
+{"name": "@vue-office/excel", "version": "1.7.14", "main": true, "renderer": true}
 {"name": "vue-resize", "version": "1.0.1"}
-{"name": "vue-router", "version": "5.4.0"}
-{"name": "vue-virtual-scroller", "version": "3.0.5"}
+{"name": "vue-router", "version": "5.4.0", "renderer": true}
+{"name": "vue-virtual-scroller", "version": "3.0.5", "renderer": true}
 {"name": "vue3-lazyload", "version": "0.4.2"}
 {"name": "vuedraggable", "version": "2.24.3"}
-{"name": "@vueuse/components", "version": "15.0.0"}
-{"name": "@vueuse/core", "version": "15.0.0"}
-{"name": "@vueuse/shared", "version": "15.0.0"}
-{"name": "vuex", "version": "4.1.0"}
-{"name": "vuex-persistedstate", "version": "4.1.0"}
+{"name": "@vueuse/components", "version": "15.0.0", "renderer": true}
+{"name": "@vueuse/core", "version": "15.0.0", "main": true, "renderer": true}
+{"name": "@vueuse/shared", "version": "15.0.0", "main": true, "renderer": true}
+{"name": "vuex", "version": "4.1.0", "main": true, "renderer": true}
+{"name": "vuex-persistedstate", "version": "4.1.0", "renderer": true}

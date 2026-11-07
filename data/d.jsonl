@@ -1,37 +1,37 @@
-{"name": "@dabh/diagnostics", "version": "2.0.9"}
-{"name": "@datarangers/sdk-electron", "version": "2.1.2"}
+{"name": "@dabh/diagnostics", "version": "2.0.9", "main": true, "renderer": true}
+{"name": "@datarangers/sdk-electron", "version": "2.1.2", "main": true}
 {"name": "date-fns", "version": "4.4.0"}
-{"name": "date-format", "version": "4.0.14"}
-{"name": "dateformat", "version": "5.0.5"}
-{"name": "dayjs", "version": "1.11.23"}
-{"name": "debounce-fn", "version": "7.0.0"}
-{"name": "debug", "version": "4.4.3"}
-{"name": "decimal.js", "version": "10.6.0"}
-{"name": "decimal.js-light", "version": "2.5.1"}
-{"name": "decode-uri-component", "version": "0.5.1"}
-{"name": "decompress-response", "version": "10.0.0"}
-{"name": "decompress-tar", "version": "4.1.1"}
-{"name": "decompress-tarbz2", "version": "4.1.1"}
-{"name": "decompress-targz", "version": "4.1.1"}
-{"name": "decompress-unzip", "version": "4.0.1"}
-{"name": "deepmerge", "version": "4.3.1"}
-{"name": "define-properties", "version": "1.2.1"}
-{"name": "del", "version": "9.0.1"}
-{"name": "delayed-stream", "version": "1.0.0"}
-{"name": "diff", "version": "9.0.0"}
-{"name": "dijkstrajs", "version": "1.0.3"}
-{"name": "dingtalk-stream", "version": "2.1.6-beta.1"}
-{"name": "disposablestack", "version": "1.1.8"}
-{"name": "@dnd-kit/core", "version": "6.3.1"}
-{"name": "@dnd-kit/sortable", "version": "10.0.0"}
-{"name": "@dnd-kit/utilities", "version": "3.2.2"}
-{"name": "docx", "version": "9.14.0"}
-{"name": "docx-preview", "version": "0.4.1"}
-{"name": "dom-to-image", "version": "2.6.0"}
-{"name": "dompurify", "version": "3.4.17"}
-{"name": "dot-prop", "version": "10.2.0"}
-{"name": "download", "version": "8.0.0"}
-{"name": "driver.js", "version": "1.10.2"}
-{"name": "du", "version": "1.0.0"}
-{"name": "dunder-proto", "version": "1.0.1"}
-{"name": "duplexer3", "version": "1.0.0"}
+{"name": "date-format", "version": "4.0.14", "main": true}
+{"name": "dateformat", "version": "5.0.5", "main": true, "renderer": true}
+{"name": "dayjs", "version": "1.11.23", "main": true, "renderer": true}
+{"name": "debounce-fn", "version": "7.0.0", "main": true}
+{"name": "debug", "version": "4.4.3", "main": true}
+{"name": "decimal.js", "version": "10.6.0", "main": true, "renderer": true}
+{"name": "decimal.js-light", "version": "2.5.1", "main": true, "renderer": true}
+{"name": "decode-uri-component", "version": "0.5.1", "main": true, "renderer": true}
+{"name": "decompress-response", "version": "10.0.0", "main": true}
+{"name": "decompress-tar", "version": "4.1.1", "main": true}
+{"name": "decompress-tarbz2", "version": "4.1.1", "main": true}
+{"name": "decompress-targz", "version": "4.1.1", "main": true}
+{"name": "decompress-unzip", "version": "4.0.1", "main": true}
+{"name": "deepmerge", "version": "4.3.1", "main": true, "renderer": true}
+{"name": "define-properties", "version": "1.2.1", "main": true}
+{"name": "del", "version": "9.0.1", "main": true}
+{"name": "delayed-stream", "version": "1.0.0", "main": true}
+{"name": "diff", "version": "9.0.0", "main": true, "renderer": true}
+{"name": "dijkstrajs", "version": "1.0.3", "main": true, "renderer": true}
+{"name": "dingtalk-stream", "version": "2.1.6-beta.1", "main": true}
+{"name": "disposablestack", "version": "1.1.8", "main": true}
+{"name": "@dnd-kit/core", "version": "6.3.1", "renderer": true}
+{"name": "@dnd-kit/sortable", "version": "10.0.0", "renderer": true}
+{"name": "@dnd-kit/utilities", "version": "3.2.2", "renderer": true}
+{"name": "docx", "version": "9.14.0", "main": true, "renderer": true}
+{"name": "docx-preview", "version": "0.4.1", "renderer": true}
+{"name": "dom-to-image", "version": "2.6.0", "main": true, "renderer": true}
+{"name": "dompurify", "version": "3.4.17", "renderer": true}
+{"name": "dot-prop", "version": "10.2.0", "main": true, "renderer": true}
+{"name": "download", "version": "8.0.0", "main": true}
+{"name": "driver.js", "version": "1.10.2", "renderer": true}
+{"name": "du", "version": "1.0.0", "main": true}
+{"name": "dunder-proto", "version": "1.0.1", "main": true}
+{"name": "duplexer3", "version": "1.0.0", "main": true}
